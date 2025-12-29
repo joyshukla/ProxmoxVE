@@ -33,6 +33,7 @@ setup_deb822_repo \
   "$(get_os_info codename)" \
   "main"
 $STD apt install -y speedtest
+setcap cap_net_raw+p /bin/ping
 msg_ok "Installed Speedtest CLI"
 
 msg_info "Configuring PHP-FPM runtime directory"
